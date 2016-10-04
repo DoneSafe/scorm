@@ -9,12 +9,17 @@ Gem::Specification.new do |s|
   s.email       = 'niklas.holmgren@mindset.se'
   s.homepage    = 'http://github.com/mindset/scorm/'
 
-  s.files         = Dir['README', 'LICENSE', 'bin/**/*', 'examples/**/*', 'skeleton/**/*', 'lib/**/{*,.[a-z]*}']
+  s.files         = `git ls-files -z`.split("x0")
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+
   s.require_path  = 'lib'
 
   s.bindir             = 'bin'
   s.executables        = ['scorm']
   s.default_executable = 'scorm'
 
-  s.add_dependency('rubyzip',  '~> 1.1')
+  s.add_runtime_dependency 'rubyzip',  '~> 1.1'
+  s.add_development_dependency "bundler", "~> 1.5"
+  s.add_development_dependency "rake"
+  s.add_development_dependency 'rpsec', '~> 3.5'
 end
