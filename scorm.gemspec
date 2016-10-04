@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'rubyzip',  '~> 1'
   s.add_development_dependency 'bundler', '~> 1'
   s.add_development_dependency 'rspec', '~> 3.5'
+  s.add_development_dependency 'coveralls'
 end
