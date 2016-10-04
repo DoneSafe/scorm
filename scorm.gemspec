@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.executables        = ['scorm']
   s.default_executable = 'scorm'
 
-  s.add_runtime_dependency 'rubyzip',  '~> 1.1'
+  s.add_runtime_dependency 'rubyzip',  '~> 1'
   s.add_development_dependency 'bundler', '~> 1'
-  s.add_development_dependency 'rpsec', '~> 3'
+  s.add_development_dependency 'rspec', '~> 3.5'
 end
